@@ -1,0 +1,13 @@
+hostname Layer-2
+!
+enable password cisco
+!
+spanning-tree mode rapid-pvst
+!
+interface FastEthernet0/1
+!
+interface FastEthernet0/2
+!
+interface FastEthernet0/3
+ switchport access vlan 20
+ switchport mode access

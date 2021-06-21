@@ -1,0 +1,7 @@
+hostname Food
+!
+enable password cisco
+!
+interface FastEthernet0/3
+ switchport access vlan 60
+ switchport mode access

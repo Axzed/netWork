@@ -1,0 +1,17 @@
+hostname DC
+!
+enable password cisco
+!
+spanning-tree mode rapid-pvst
+!
+interface FastEthernet0/1   //划分VLAN
+ switchport access vlan 70
+ switchport mode access
+!
+interface FastEthernet0/2
+ switchport access vlan 70
+ switchport mode access
+!
+interface FastEthernet0/3
+ switchport access vlan 70
+ switchport mode access

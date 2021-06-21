@@ -1,0 +1,26 @@
+hostname Outside
+!
+username admin password  admin
+！
+interface FastEthernet0/0
+ ip address 123.1.1.1 255.255.255.252   //配置IP地址
+!
+interface FastEthernet0/1
+ ip address 123.1.1.5 255.255.255.252
+!
+interface Serial0/0/0
+ ip address 11.1.1.1 255.255.255.0
+!
+interface Ethernet0/1/0
+ ip address 12.1.1.2 255.255.255.0
+!
+router ospf 110   //配置OSPF
+ router-id 1.1.1.1
+ redistribute static subnets 
+ network 123.1.1.1 0.0.0.0 area 0
+ network 123.1.1.5 0.0.0.0 area 0
+ network 11.1.1.1 0.0.0.0 area 0
+!
+line vty 0 4
+ password cisco
+ login

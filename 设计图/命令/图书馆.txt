@@ -1,0 +1,7 @@
+hostname Layer-3
+!
+enable password cisco
+!
+interface FastEthernet0/3
+ switchport access vlan 30
+ switchport mode access
